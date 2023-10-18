@@ -3,7 +3,7 @@ import "./haberler.less";
 // OPSİYONEL: Kendinizi maceracı hissediyorsanız, bu verileri farklı bir modülden dışa aktarmaya çalışın ve buraya aktarın.
 // ES6 Modülleri ile ilgili bilgi için bakabilirsiniz: https://exploringjs.com/es6/ch_modules.html#sec_basics-of-es6-modules
 const data = [
-  {
+  { 
     baslik: 'Workintech Öğrencileri: "Bizler en iyi öğrencileriz!"',
     tarih: "11 Kasım 2022",
     ilkParagraf: `Lucas ipsum dolor sit amet ben twi'lek padmé darth darth darth moff hutt organa twi'lek. Ben amidala secura skywalker lando
@@ -87,7 +87,27 @@ const data = [
     ucuncuParagraf: `Hodor hodor - hodor... Hodor hodor hodor hodor. Hodor. Hodor! Hodor hodor, hodor hodor hodor hodor hodor; hodor hodor? Hodor!
           Hodor hodor, HODOR hodor, hodor hodor?! Hodor! Hodor hodor, HODOR hodor, hodor hodor, hodor, hodor hodor. Hodor, hodor.
           Hodor. Hodor, hodor, hodor. Hodor hodor... Hodor hodor hodor?! Hodor, hodor... Hodor hodor HODOR hodor, hodor hodor. Hodor.`,
-  },
+},
+ 
+        {
+          baslik: "En İyi Yazılımcı Ben Olacağım!",
+          tarih: "18 Ekim 2023",
+          ilkParagraf: `5`,
+          ikinciParagraf: `AY`,
+          ucuncuParagraf: `SONRA YAZILIMCI OLACAĞIM!`,
+        },
+        
+    {
+      baslik: "Ben Kimim ?",
+      tarih: "18 Ekim 2023",
+      ilkParagraf: `Ömer Alptuğ Özateş`,
+      ikinciParagraf: `Adana`,
+      ucuncuParagraf: `25/12/1998`,
+    }
+          
+
+          
+  ,
 ];
 
 /*
@@ -117,6 +137,7 @@ const data = [
 */
 
 function haberYapici(haber) {
+
   const yeniHaber = document.createElement("div");
   yeniHaber.classList.add("article");
 
@@ -126,20 +147,23 @@ function haberYapici(haber) {
 
   const paragraf = document.createElement("p");
   paragraf.classList.add("tarih");
-  paragraf.textContent = haber.tarih;
+  paragraf.textContent = haber.ilkParagraf;
   yeniHaber.appendChild(paragraf);
 
   const paragraf1 = document.createElement("p");
-  paragraf1.textContent = haber.tarih;
+  paragraf1.textContent = haber.ikinciParagraf;
   yeniHaber.appendChild(paragraf1);
 
   const paragraf2 = document.createElement("p");
-  paragraf2.textContent = haber.tarih;
+  paragraf2.textContent = haber.ucuncuParagraf;
   yeniHaber.appendChild(paragraf2);
 
   const paragraf3 = document.createElement("p");
   paragraf3.textContent = haber.tarih;
   yeniHaber.appendChild(paragraf3);
+
+  const paragraf4 = document.createElement("p");
+  yeniHaber.appendChild(paragraf4);
 
   const expandButton = document.createElement("span");
   expandButton.textContent = "+"
